@@ -1,0 +1,20 @@
+{
+  "name": "site-web-statique",
+  "version": "1.0.0",
+  "description": "Un projet de site web statique avec des articles et un menu de navigation.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "static",
+    "website",
+    "articles"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

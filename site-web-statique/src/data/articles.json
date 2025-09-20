@@ -1,0 +1,16 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Article 1",
+      "definition": "Ceci est la définition de l'article 1.",
+      "quote": "Ceci est une citation de l'article 1."
+    },
+    {
+      "id": 2,
+      "title": "Article 2",
+      "definition": "Ceci est la définition de l'article 2.",
+      "quote": "Ceci est une citation de l'article 2."
+    }
+  ]
+}
