@@ -1,4 +1,4 @@
-// Charge dynamiquement le fragment header depuis /src/components/header.html
+// Charge dynamiquement le fragment header depuis components/header.html (site à la racine)
 (function() {
 	async function tryFetch(url) {
 		try {

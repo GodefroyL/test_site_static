@@ -29,7 +29,7 @@ site-web-statique
 
 1. Clonez le dépôt sur votre machine locale.
 2. Ouvrez le dossier du projet dans votre éditeur de code.
-3. Ouvrez le fichier `src/index.html` dans un navigateur pour voir la page d'accueil.
+3. Ouvrez le fichier `index.html` dans un navigateur pour voir la page d'accueil.
 
 ## Utilisation
 

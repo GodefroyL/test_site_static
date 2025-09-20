@@ -2,7 +2,7 @@
   "name": "site-web-statique",
   "version": "1.0.0",
   "description": "Un projet de site web statique avec des articles et un menu de navigation.",
-  "main": "src/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "live-server src"
   },
