@@ -16,7 +16,8 @@
 				'components/header.html', // relative
 				'./components/header.html',
 				'../components/header.html',
-				'/components/header.html' // root-relative
+				'/components/header.html', // root-relative (when server root is src)
+				'/src/components/header.html' // if server root is project root
 			];
 
 			let resp = null;
@@ -80,22 +81,23 @@
 			const container = document.getElementById('header');
 			if (container) container.innerHTML = html;
 
-			// Convertir data-target en href (site servi depuis la racine)
+			// Convertir data-target en href approprié pour fonctionner sur GitHub Pages et local
 			try {
 				const anchors = container.querySelectorAll('a[data-target]');
 				const inArticles = location.pathname.includes('/articles/') || location.pathname.match(/\/articles\//);
 				anchors.forEach(a => {
 					const target = a.getAttribute('data-target');
+					// Si on est dans un fichier sous /src/articles/ (chemins relatifs nécessaires)
 					if (inArticles) {
-						// depuis une page sous /articles/, les liens vers articles doivent être relatifs
+						// depuis une page articles/*.html, les href vers articles doivent être relatives
 						if (target.startsWith('articles/')) {
-							a.setAttribute('href', target.replace('articles/', ''));
+							a.setAttribute('href', target.replace('articles/', '')); // article-1.html
 						} else {
 							a.setAttribute('href', '../' + target);
 						}
 					} else {
-						// depuis la racine, utiliser le chemin tel quel
-						a.setAttribute('href', '/' + target);
+						// depuis la racine (index.html), utiliser chemins relatifs au serveur
+						a.setAttribute('href', target);
 					}
 				});
 
@@ -107,7 +109,9 @@
 						if (resolved.pathname === location.pathname) a.classList.add('active');
 					} catch (e) { /* ignore */ }
 				});
-			} catch (e) { /* ignore */ }
+			} catch (e) {
+				// ignore
+			}
 		} catch (err) {
 			console.error('Erreur lors du chargement du header:', err);
 		}
