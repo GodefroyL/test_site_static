@@ -94,3 +94,95 @@ footer {
     header nav ul { gap: 10px; }
     main { padding: 24px 16px; }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Masquer la checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Burger */
+.burger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Menu */
+nav ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    width: 200px;
+}
+
+nav ul.menu li a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul.menu li a:hover {
+    background-color: #575757;
+}
+
+/* Afficher le menu quand la checkbox est cochée */
+#menu-toggle:checked ~ ul.menu {
+    display: flex;
+}
+
+/* Responsive : menu horizontal sur grand écran */
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+
+    nav ul.menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        width: auto;
+    }
+
+    nav ul.menu li a {
+        padding: 10px 15px;
+    }
+}
