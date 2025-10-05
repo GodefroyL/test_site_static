@@ -96,8 +96,6 @@ footer {
     main { padding: 24px 16px; }
 }
 
-/* Reset basique */
-
 /* Sidebar */
 .sidebar {
     position: fixed;
@@ -105,9 +103,10 @@ footer {
     left: 0;
     width: 220px;
     height: 100%;
-    background-color: #333;
+    background-color: blue;
     color: white;
     padding-top: 20px;
+    flex-direction: column;
 }
 
 .sidebar .logo {
