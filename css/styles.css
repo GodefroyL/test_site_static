@@ -1,84 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #eef7fb; /* très léger bleu */
-    color: #0f1724; /* bleu foncé pour texte */
 }
 
+/* Header */
 header {
-    position: absolute;
-    text-align: center;
-    height: 70px;
-    background: #0b6ff2;
-    color: white;
+    height: 13vh;
     width: 100%;
-    top: 0;
-}
 
-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    flex-direction: row;
     display: flex;
-    flex-direction: column;
-    background-color: #0b6ff2;
-    color: white;
-    width: 220px;
-    margin-top: 70px;
-    width: 100px;
+    align-items: center;
+    justify-content: center;
+
+    background-color: gray;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
+header .logo {
+    position: absolute;
     left: 0;
-    bottom: 0;
+    height: 100%;
+    width: 15%;
+    
     display: flex;
-    flex-direction: column;
-    background-color: #0b6ff2;
-    color: white;
-    width: 220px;}
+    align-items: center;
+    justify-content: center;
 
-
-main {
-    padding: 40px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
+    background-color: darkgray;
 }
 
-article {
-    margin-bottom: 20px;
-    padding: 22px;
-    border: 1px solid rgba(11,111,242,0.12);
-    border-radius: 10px;
-    background-color: #ffffff;
-}
+header .titre {
+    text-align: center;
+    width: 100%;
 
-h1 {
     color: #07204a;
+    font-size: 2em;
 }
 
-p {
-    line-height: 1.6;
-}
 
-footer {
-    position: absolute;
-    text-align: center;
-    padding: 18px 0;
-    background: #0b6ff2;
-    color: white;
-    width: 100%;
-    bottom: 0;}
-
-
-/* Contenu principal */
+/* Main content */
 main {
-    margin-left: 220px; /* pour ne pas être caché par la sidebar */
-    padding: 20px;
+    display: flex;
+    flex: 1;
+
+    background-color: white;
+}
+
+.menu {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding-top: 2%;
+
+    background-color: blue;
+    color: white;
+}
+.menu .titre {
+    left: 0;
+    font-size: 1.5em;
+    margin: 10px;
+    margin-left: -10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background-color: white;
+
+    color: black;
+    text-align: justify;
+}
+
+.selection {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 2%;
+
+    background-color: red;
+    color: blue;
 }
 
 
+/* Footer */
+footer {
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: grey;
+}
