@@ -29,7 +29,13 @@ header .logo {
     align-items: center;
     justify-content: center;
 
-    background-color: darkgray;
+    background-color: #052952;
+}
+
+header .logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 header .titre {
