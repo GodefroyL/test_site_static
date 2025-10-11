@@ -16,7 +16,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    background-color: gray;
+    background-color: #052952;
 }
 
 header .logo {
@@ -42,7 +42,7 @@ header .titre {
     text-align: center;
     width: 100%;
 
-    color: #07204a;
+    color: white;
     font-size: 2em;
 }
 
@@ -52,7 +52,7 @@ main {
     display: flex;
     flex: 1;
 
-    background-color: white;
+    background-color: #052952;
 }
 
 .menu {
@@ -63,7 +63,7 @@ main {
     align-items: center;
     padding-top: 2%;
 
-    background-color: blue;
+    background-color: #052952;
     color: white;
 }
 .menu .titre {
@@ -86,11 +86,15 @@ main {
 
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 30px;
+
+    border-top-left-radius: 5%;
 
     background-color: white;
 
     color: black;
     text-align: justify;
+    font-size: 1.2em;
 }
 
 .selection {
@@ -100,8 +104,16 @@ main {
 
     padding: 2%;
 
-    background-color: red;
-    color: blue;
+    background-color: white;
+
+    color: black;
+}
+
+.selection .articleSelectionne {
+    color: black;
+    background-color: beige;
+    text-decoration: none;
+    margin: 5px;
 }
 
 
