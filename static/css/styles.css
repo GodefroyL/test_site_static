@@ -55,6 +55,7 @@ main {
     background-color: #052952;
 }
 
+/* Style pour le menu de navigation */
 .menu {
     width: 15%;
     display: flex;
@@ -79,6 +80,7 @@ main {
     margin: 5px;
 }
 
+/* Style pour la page principale */
 .page {
     flex: 1;
     display: flex;
@@ -90,7 +92,10 @@ main {
 
     border-top-left-radius: 50px;
 
-    background-color: white;
+    background-color: #f9f9f9;
+
+    font-family: Georgia, serif;
+    line-height: 1.6;
 
     color: black;
     text-align: justify;
@@ -104,6 +109,79 @@ main {
     display: block;
 }
 
+/* Ajouts pour la page "Aide-mémoire sur le traditionalisme" */
+.page h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    color: #052952;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    color: #052952;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #052952;
+    padding-bottom: 5px;
+}
+
+.page h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #052952;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.page h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: #052952;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.page p {
+    margin: 15px 0;
+}
+
+.page ul, .page ol {
+    margin: 15px 0 15px 30px;
+}
+
+.page li {
+    margin: 5px 0;
+}
+
+.page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.page th, .page td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.page th {
+    background-color: #f2f2f2;
+}
+
+/* Style pour les citations et les notes */
+.page em {
+    font-style: italic;
+    color: #555;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Style pour la sélection d'articles */
 .selection {
     width: 20%;
     display: flex;
