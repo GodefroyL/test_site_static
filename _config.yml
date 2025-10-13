@@ -1,0 +1,4 @@
+title: Mon Site Web Statique
+description: Site pour tester le déploiement sur GitHub Pages.
+baseurl: "" # Laisser vide si le site est à la racine du domaine
+url: "https://godefroyl.github.io/test_site_static/" # Remplacez par l'URL de votre site
