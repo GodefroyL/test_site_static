@@ -86,8 +86,8 @@ main {
     display: flex;
     flex-direction: column;
 
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 6%;
+    padding-right: 6%;
     padding-top: 30px;
 
     border-top-left-radius: 50px;
