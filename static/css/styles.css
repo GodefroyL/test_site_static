@@ -173,6 +173,11 @@ main {
     background-color: #f2f2f2;
 }
 
+.page audio {
+    width: 80%;
+    margin: 20px 0;
+}
+
 /* Style pour les citations et les notes */
 .page em {
     font-style: italic;
