@@ -12,7 +12,6 @@
             <a href="{{ site.url }}/index.html"><img src="{{ site.url }}/static/images/logo.png" alt="Logo du site"></a>
         </div>
         <div class="titre">{{ site.title }}</div>
-        <!-- Bouton hamburger pour mobile -->
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -30,10 +29,12 @@
             {{ content }}
         </div>
         <div class="selection">
-            <h2>Sélection de la semaine</h2>
-            <a class="articleSelectionne" href="{{ site.url }}/html/categories/categorie1/aide-memoire-tradi.html">Aide-mémoire sur le traditionalisme</a>
-            <a class="articleSelectionne" href="#">Lien 2</a>
-            <a class="articleSelectionne" href="#">Lien 3</a>
+            <h2 class="selection-title">Sélection de la semaine</h2>
+            <div class="articles-container">
+                <a class="articleSelectionne" href="{{ site.url }}/html/categories/categorie1/aide-memoire-tradi.html">Aide-mémoire sur le traditionalisme</a>
+                <a class="articleSelectionne" href="#">Lien 2</a>
+                <a class="articleSelectionne" href="#">Lien 3</a>
+            </div>
         </div>
     </main>
     <footer>
@@ -41,12 +42,10 @@
         <a href="{{ site.url }}/html/contact.html">Contact</a>
         <p>&copy; 2025 Mon Site Web Statique</p>
     </footer>
-    <!-- Script pour le bouton hamburger -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const menu = document.querySelector('.menu');
-
             hamburger.addEventListener('click', function() {
                 menu.classList.toggle('active');
             });

@@ -5,28 +5,24 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-/* Header */
 header {
     height: 13vh;
     width: 100%;
     position: relative;
-    flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pour placer le bouton hamburger à droite */
+    justify-content: space-between;
     background-color: #052952;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 header .logo {
-    height: 100%;
-    width: auto;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
 }
-header .logo a img {
-    max-height: 80%;
+header .logo img {
+    max-height: 100%;
     max-width: 100%;
     object-fit: contain;
 }
@@ -37,14 +33,16 @@ header .titre {
     text-align: center;
     color: white;
     font-size: 1.5em;
-    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
 }
-/* Bouton hamburger (masqué sur desktop) */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
+    z-index: 1001;
 }
 .hamburger span {
     height: 3px;
@@ -53,13 +51,11 @@ header .titre {
     margin: 3px 0;
     border-radius: 3px;
 }
-/* Main content */
 main {
     display: flex;
     flex: 1;
     background-color: #052952;
 }
-/* Menu latéral */
 .menu {
     width: 15%;
     display: flex;
@@ -69,33 +65,6 @@ main {
     background-color: #052952;
     color: white;
 }
-.menu .titre {
-    font-size: 1.2em;
-    margin: 10px;
-}
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin: 5px;
-}
-/* Sélection d'articles (masquée sur mobile par défaut) */
-.selection {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    background-color: #f9f9f9;
-    color: black;
-    font-size: 1.2em;
-}
-.selection .articleSelectionne {
-    color: black;
-    background-color: beige;
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px;
-}
-/* Page principale */
 .page {
     flex: 1;
     display: flex;
@@ -107,130 +76,104 @@ main {
     line-height: 1.6;
     color: black;
     text-align: justify;
-    font-size: 1em;
 }
-.page img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 10px auto;
-}
-.page h1, .page h2, .page h3, .page h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #052952;
-}
-.page h1 {
-    font-size: 1.8em;
-    margin: 15px 0;
-}
-.page h2 {
-    font-size: 1.4em;
-    margin: 12px 0;
-    border-bottom: 1px solid #052952;
-    padding-bottom: 3px;
-}
-.page h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-.page h4 {
-    font-size: 1em;
-    margin: 8px 0;
-    font-weight: bold;
-}
-.page p {
-    margin: 10px 0;
-}
-.page ul, .page ol {
-    margin: 10px 0 10px 20px;
-}
-.page li {
-    margin: 5px 0;
-}
-.page table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    font-size: 0.9em;
-}
-.page th, .page td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-.page th {
-    background-color: #f2f2f2;
-}
-.page audio {
-    width: 100%;
-    margin: 15px 0;
-}
-/* Footer */
-footer {
-    height: auto;
-    width: 100%;
+.selection {
+    width: 20%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: grey;
-    padding: 10px;
-    font-size: 0.9em;
+    flex-direction: column;
+    padding: 2%;
+    background-color: #f9f9f9;
+    color: black;
+}
+.selection-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.articles-container {
+    display: flex;
+    flex-direction: column;
+}
+.articleSelectionne {
+    color: black;
+    background-color: beige;
+    text-decoration: none;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    word-break: break-word;
 }
 
 /* Media Query pour mobile (écrans < 768px) */
 @media (max-width: 768px) {
-    /* Afficher le bouton hamburger */
+    header {
+        height: auto;
+        padding: 10px;
+    }
+    header .logo {
+        height: 60px;
+        width: auto;
+    }
+    header .logo img {
+        max-height: 50px;
+        max-width: 50px;
+    }
+    header .titre {
+        position: static;
+        transform: none;
+        font-size: 1.1em;
+        max-width: none;
+        white-space: normal;
+        text-overflow: clip;
+        overflow: visible;
+        flex: 1;
+        text-align: center;
+        padding: 0 10px;
+    }
     .hamburger {
         display: flex;
+        margin-left: 10px;
     }
-    /* Masquer le menu latéral par défaut */
-    .menu {
-        display: none;
-        position: fixed;
-        top: 13vh;
-        left: 0;
-        width: 80%;
-        height: calc(100vh - 13vh);
-        background-color: #052952;
-        z-index: 1000;
-        padding-top: 0;
-        overflow-y: auto;
-    }
-    /* Afficher le menu quand la classe "active" est ajoutée */
-    .menu.active {
-        display: flex;
-    }
-    /* Placer la sélection d'articles sous le header */
     main {
         flex-direction: column;
     }
+    .menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background-color: #052952;
+        z-index: 1000;
+        padding-top: 20px;
+    }
+    .menu.active {
+        display: flex;
+    }
     .selection {
         width: 100%;
-        order: 1; /* Placer avant le contenu principal */
-        padding: 10px;
-        font-size: 1em;
+        padding: 10px 20px;
+        order: 1;
     }
-    /* Ajuster le contenu principal */
+    .selection-title {
+        display: none; /* Masquer le titre sur mobile */
+    }
+    .articles-container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .articleSelectionne {
+        flex: 1;
+        margin: 5px;
+        min-width: 30%;
+        max-width: 32%;
+        text-align: center;
+        font-size: 0.9em;
+    }
     .page {
         width: 100%;
         order: 2;
         padding: 15px;
-        font-size: 0.95em;
-    }
-    /* Ajuster le header pour le bouton hamburger */
-    header {
-        height: auto;
-        padding: 10px 20px;
-    }
-    header .titre {
-        font-size: 1.2em;
-    }
-    /* Ajuster les tableaux pour mobile */
-    .page table {
-        font-size: 0.8em;
-    }
-    .page th, .page td {
-        padding: 5px;
     }
 }
