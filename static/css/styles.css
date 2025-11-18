@@ -1,61 +1,49 @@
-/* Styles de base (inchangés pour desktop) */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
 }
+/* Header */
 header {
     height: 13vh;
     width: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #052952;
-    padding: 0 15px;
-}
-header .logo {
-    height: 80%;
+    flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #052952;
 }
-header .logo img {
+header .logo {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 15%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #052952;
+}
+header .logo a img {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 70%;
     object-fit: contain;
 }
 header .titre {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
+    width: 100%;
     color: white;
-    font-size: 1.5em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 50%;
+    font-size: 2em;
 }
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-}
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 3px 0;
-    border-radius: 3px;
-}
+/* Main content */
 main {
     display: flex;
     flex: 1;
     background-color: #052952;
 }
+/* Style pour le menu de navigation */
 .menu {
     width: 15%;
     display: flex;
@@ -65,18 +53,105 @@ main {
     background-color: #052952;
     color: white;
 }
+.menu .titre {
+    left: 0;
+    font-size: 1.5em;
+    margin: 10px;
+    margin-left: -10px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+/* Style pour la page principale */
 .page {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 30px;
     border-top-left-radius: 50px;
     background-color: #f9f9f9;
     font-family: Georgia, serif;
     line-height: 1.6;
     color: black;
     text-align: justify;
+    font-size: 1.2em;
 }
+.page img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+}
+/* Ajouts pour la page "Aide-mémoire sur le traditionalisme" */
+.page h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    color: #052952;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.page h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    color: #052952;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #052952;
+    padding-bottom: 5px;
+}
+.page h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #052952;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.page h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: #052952;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.page p {
+    margin: 15px 0;
+}
+.page ul, .page ol {
+    margin: 15px 0 15px 30px;
+}
+.page li {
+    margin: 5px 0;
+}
+.page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.page th, .page td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.page th {
+    background-color: #f2f2f2;
+}
+.page audio {
+    width: 80%;
+    margin: 20px 0;
+}
+/* Style pour les citations et les notes */
+.page em {
+    font-style: italic;
+    color: #555;
+    display: block;
+    margin-bottom: 20px;
+}
+/* Style pour la sélection d'articles */
 .selection {
     width: 20%;
     display: flex;
@@ -84,23 +159,22 @@ main {
     padding: 2%;
     background-color: #f9f9f9;
     color: black;
+    font-size: 1.5em;
 }
-.selection-title {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-.articles-container {
-    display: flex;
-    flex-direction: column;
-}
-.articleSelectionne {
+.selection .articleSelectionne {
     color: black;
     background-color: beige;
     text-decoration: none;
     margin: 5px;
-    padding: 8px;
-    border-radius: 4px;
-    word-break: break-word;
+}
+/* Footer */
+footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
 }
 
 /* Media Query pour mobile (écrans < 768px) */
