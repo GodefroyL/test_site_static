@@ -111,7 +111,7 @@ main {
     }
     header .logo {
         height: 60px;
-        width: auto;
+        width: 25%;
     }
     header .logo img {
         max-height: 50px;
@@ -121,6 +121,7 @@ main {
         position: static;
         transform: none;
         font-size: 1.1em;
+        width: 60%;
         max-width: none;
         white-space: normal;
         text-overflow: clip;
@@ -132,6 +133,7 @@ main {
     .hamburger {
         display: flex;
         margin-left: 10px;
+        width: 15%;
     }
     main {
         flex-direction: column;
@@ -175,5 +177,6 @@ main {
         width: 100%;
         order: 2;
         padding: 15px;
+        border-top-left-radius: 0%;
     }
 }
