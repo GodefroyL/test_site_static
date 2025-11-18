@@ -161,9 +161,15 @@ main {
     color: black;
     font-size: 1.5em;
 }
+
+.selection .articles-container {
+    display: flex;
+    background-color: beige;
+    flex-direction: column;
+    margin-top: 10px;
+}
 .selection .articleSelectionne {
     color: black;
-    background-color: beige;
     text-decoration: none;
     margin: 5px;
 }
