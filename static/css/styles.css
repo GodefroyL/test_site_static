@@ -166,8 +166,8 @@ main {
     display: flex;
     background-color: beige;
     flex-direction: column;
+    margin: 5px;
     margin-top: 10px;
-    padding: 5px;
 }
 .selection .articleSelectionne {
     color: black;
@@ -248,7 +248,7 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
         width: 30%;
-        padding: 0.5%;
+        margin: 1%;
     }
     .articleSelectionne {
         flex: 1;
