@@ -87,7 +87,7 @@ header .titre {
 /* Contenu principal */
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex: 1;
     background-color: var(--secondary-color);
 }
@@ -95,12 +95,16 @@ main {
 /* Menu de navigation */
 .menu {
     width: 20%;
+    height: auto;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: var(--text-light);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     z-index: 1000;
