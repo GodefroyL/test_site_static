@@ -93,7 +93,7 @@ main {
 
 /* Menu de navigation */
 .menu {
-    width: 250px;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -214,7 +214,7 @@ main {
 
 /* Sélection d'articles */
 .selection {
-    width: 100%;
+    width: 29%;
     display: flex;
     flex-direction: column;
     padding: 20px;
