@@ -87,6 +87,7 @@ header .titre {
 /* Contenu principal */
 main {
     display: flex;
+    justify-content: space-between;
     flex: 1;
     background-color: var(--secondary-color);
 }
@@ -130,6 +131,7 @@ main {
 /* Page principale */
 .page {
     flex: 1;
+    width: 45%;
     display: flex;
     flex-direction: column;
     padding: 30px;
