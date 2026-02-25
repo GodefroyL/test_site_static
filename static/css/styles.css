@@ -36,7 +36,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 0 20px;
+    padding: 20px;
     box-shadow: var(--box-shadow);
 }
 
@@ -88,6 +88,7 @@ header .titre {
 main {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
     flex: 1;
     background-color: var(--secondary-color);
 }
@@ -108,7 +109,6 @@ main {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    z-index: 1000;
 }
 
 .menu .titre {
