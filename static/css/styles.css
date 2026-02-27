@@ -230,6 +230,7 @@ main {
 
 .selection .articles-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     margin: 10px 0;
