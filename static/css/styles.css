@@ -36,21 +36,21 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-shadow: var(--box-shadow);
 }
 
 header .logo {
     height: 80%;
-    width: auto;
-    display: flex;
+    display: block;
     align-items: center;
-    justify-content: center;
 }
 
 header .logo a img {
     max-height: 100%;
     max-width: 150px;
+    display: block;
     object-fit: contain;
     transition: var(--transition);
 }
